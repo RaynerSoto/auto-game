@@ -10,17 +10,10 @@ function game(){
     let maximo = 1000000000000000000000;
     let number = Math.floor(Math.random() * (maximo - minimo) + minimo)
     let fecha = performance.now();
-    for (; ; inicializador++){
+    for (adivino = 0; adivino!= number; inicializador++){
         adivino = Math.floor(Math.random() * (maximo - minimo) + minimo);
-        if (adivino == number)
-            break;
-        else {
-            if (number < adivino){
-                maximo = adivino;
-            }
-            else
-                minimo = adivino;
-        }
+        if (adivino != number)
+            number < adivino ? maximo = adivino : minimo = adivino;
     }
     fecha_fin = performance.now();
     let label = document.getElementById('label');
