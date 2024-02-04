@@ -5,10 +5,8 @@ parrafo.innerHTML = 'El objetivo es ver cuanto tiempo necesita un ordenador para
 
 
 function game(){
-    let inicializador = 1,adivino;
-    let minimo = 1;
-    let maximo = 1000000000000000000000;
-    let number = Math.floor(Math.random() * (maximo - minimo) + minimo)
+    let inicializador = 1,adivino,minimo = 1,maximo = 1000000000000000000000;
+    let number = Math.floor(Math.random() * (maximo - minimo) + minimo);
     let fecha = performance.now();
     for (adivino = 0; adivino!= number; inicializador++){
         adivino = Math.floor(Math.random() * (maximo - minimo) + minimo);
