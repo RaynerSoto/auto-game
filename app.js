@@ -13,7 +13,7 @@ function game(){
         if (adivino != number)
             number < adivino ? maximo = adivino : minimo = adivino;
     }
-    fecha_fin = performance.now();
     let label = document.getElementById('label');
+    fecha_fin = performance.now();
     label.innerHTML = `Tu ordenador se tardó ${fecha_fin - fecha} milisegundos y tuvo que hacer ${inicializador} iteraciones , el nùmero era ${adivino} y se generó ${number}`;
 }
